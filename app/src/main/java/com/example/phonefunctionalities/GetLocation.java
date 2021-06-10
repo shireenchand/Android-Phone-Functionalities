@@ -68,6 +68,8 @@ public class GetLocation extends AppCompatActivity {
                                 try {
                                     List <Address> addresses = geocoder.getFromLocation(
                                             location.getLatitude(),location.getLongitude(),1);
+                                    lat = addresses.get(0).getLatitude();
+                                    lon = addresses.get(0).getLongitude();
                                     //tv_currentlocation.setText("Lat= "+addresses.get(0).getLatitude()+" Lon= "+addresses.get(0).getLongitude());
                                 } catch (IOException e) {
                                     e.printStackTrace();
